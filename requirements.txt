@@ -1,0 +1,6 @@
+flask
+sentence-transformers
+faiss-cpu
+google-generativeai
+numpy
+python-dotenv

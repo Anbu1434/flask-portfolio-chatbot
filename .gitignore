@@ -1,0 +1,15 @@
+# Environment variables
+.env
+
+# Python cache and virtual environment
+__pycache__/
+*.pyc
+venv/
+env/
+
+# FAISS index and large pickle files
+*.pkl
+*.bin
+
+# System files
+.DS_Store

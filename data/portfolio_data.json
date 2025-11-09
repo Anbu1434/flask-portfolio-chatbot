@@ -1,0 +1,99 @@
+{
+  "name": "Anbarasan A",
+  "contact": {
+    "email": "anbarasan0909@gmail.com",
+    "mobile": "+91 7094079306",
+    "linkedin": "https://www.linkedin.com/in/anbarasan-a-859651260/",
+    "github": "GitHub/Behance"
+  },
+ "education": [
+  {
+    "institution": "Anand Institute of Higher Technology",
+    "location": "Chennai, India",
+    "degree": "Bachelor of Engineering in Computer Science and Engineering",
+    "cgpa": "8.06",
+    "duration": "Nov 2022 - May 2026"
+  },
+  {
+    "institution": "Sathya Saai Matriculation Higher Secondary School",
+    "location": "Cuddalore, India",
+    "stream": "Computer Science - Mathematics",
+    "gpa": "7.6",
+    "duration": "June 2018 - August 2021"
+  }
+ ],
+  "skills": {
+    "languages": ["Python3", "C", "SQL", "JavaScript", "HTML5", "CSS3"],
+    "frameworks_libraries": ["Django", "React.js", "React Native", "Node.js", "Express.js", "Flask"],
+    "developer_tools_platforms": ["Git", "GitHub", "REST APIs", "Visual Studio Code", "PyCharm"],
+    "ui_ux_design": ["Figma", "Sketch", "Wireframing", "Prototyping"],
+    "soft_skills": ["Team Collaboration & Leadership", "Adaptability & Flexibility", "Conflict Resolution"]
+  },
+  "experience": [
+    {
+      "role": "Software Development Intern",
+      "company": "Dvein Innovations Pvt Ltd",
+      "duration": "August 2025 - Present",
+      "responsibilities": [
+        "Developed real-time notifications system, improving user engagement by 30%.",
+        "Implemented secure document tracking, reducing data errors by 25%.",
+        "Optimized API response time by 40% with efficient queries and caching, enabling faster document retrieval.",
+        "Boosted team productivity by 20% by streamlining GitHub workflows and agile sprint planning."
+      ]
+    }
+  ],
+  "projects": [
+    {
+      "title": "AI Travel Planner App",
+      "tech_stack": ["React Native", "Gemini API", "Firebase"],
+      "duration": "December 2023 - February 2024",
+      "details": [
+        "Built a cross-platform mobile app using React Native to generate personalized travel plans with AI.",
+        "Integrated Gemini API to provide real-time, AI-powered itinerary suggestions based on user preferences.",
+        "Used Firebase for user authentication and Firestore for storing trip data and user history.",
+        "Focused on delivering seamless user experience with responsive UI and smooth navigation."
+      ]
+    },
+    {
+      "title": "Event Management System",
+      "tech_stack": ["Django", "Python", "MySQL", "Database Masking"],
+      "duration": "January 2025 - July 2025",
+      "details": [
+        "Built a web application using Django to manage events, registrations, and schedules efficiently.",
+        "Implemented user authentication and role-based access for organizers and attendees.",
+        "Integrated MySQL with data masking techniques to protect sensitive user information.",
+        "Developed an admin dashboard for monitoring event activity and managing user data securely."
+      ]
+    }
+  ],
+  "certificates": [
+    {
+      "name": "Programming in Python",
+      "issuer": "Geeks for Geeks",
+      "date": "March 2023",
+      "highlights": [
+        "Mastered fundamental Python syntax, control flow, loops, functions, and data structures.",
+        "Acquired expertise in procedural programming paradigms and logical concepts."
+      ]
+    },
+    {
+      "name": "Python Django",
+      "issuer": "Geeks for Geeks",
+      "date": "December 2024",
+      "highlights": [
+        "Covered core Django concepts: models, views, templates, authentication, and deployment.",
+        "Built multiple web applications using the Django framework."
+      ]
+    },
+    {
+      "name": "UI/UX Design",
+      "issuer": "Udemy",
+      "date": "March 2024",
+      "highlights": [
+        "Learned core design principles including usability, accessibility, and user-centered design.",
+        "Gained hands-on experience in wireframing, prototyping, and user research.",
+        "Worked with industry-standard tools such as Figma and Sketch."
+      ]
+    }
+  ]
+}
