@@ -60,20 +60,29 @@ chunks = chunk_text(resume_text)
 vectorizer = TfidfVectorizer()
 embeddings = vectorizer.fit_transform(chunks)
 
-@app.route("/api/chat", methods=["POST"])
+@app.route("/api/chat", methods=["GET", "POST"])
 def chat_api():
+    # Handle GET request (like when you open it in browser)
+    if request.method == "GET":
+        return jsonify({
+            "message": "👋 This is Anbarasan’s Resume Chatbot API.",
+            "usage": {
+                "method": "POST",
+                "example_body": {"query": "Tell me about Anbarasan A"}
+            }
+        }), 200
+
+    # Handle POST request from frontend
     try:
-        # ✅ Force Flask to interpret as JSON
         if not request.is_json:
             return jsonify({"error": "Request must be JSON"}), 415
 
         data = request.get_json(force=True)
         user_query = data.get("query", "").strip()
-
         if not user_query:
             return jsonify({"error": "Missing 'query'"}), 400
 
-        # Retrieve top 3 relevant chunks
+        # TF-IDF similarity retrieval
         query_vec = vectorizer.transform([user_query])
         sims = cosine_similarity(query_vec, embeddings).flatten()
         top_indices = sims.argsort()[-3:][::-1]
@@ -103,6 +112,7 @@ def chat_api():
     except Exception as e:
         print("Error:", e)
         return jsonify({"error": str(e)}), 500
+
 
 
 @app.route("/", methods=["GET"])
