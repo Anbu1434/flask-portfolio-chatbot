@@ -10,7 +10,6 @@ from dotenv import load_dotenv
 load_dotenv()
 
 app = Flask(__name__)
-CORS(app)
 CORS(app, resources={r"/*": {"origins": "*"}})
 # Configure Gemini
 genai.configure(api_key=os.getenv("GEMINI_API_KEY"))
@@ -64,7 +63,13 @@ embeddings = vectorizer.fit_transform(chunks)
 @app.route("/api/chat", methods=["POST"])
 def chat_api():
     try:
-        user_query = request.json.get("query", "")
+        # ✅ Force Flask to interpret as JSON
+        if not request.is_json:
+            return jsonify({"error": "Request must be JSON"}), 415
+
+        data = request.get_json(force=True)
+        user_query = data.get("query", "").strip()
+
         if not user_query:
             return jsonify({"error": "Missing 'query'"}), 400
 
@@ -96,7 +101,9 @@ def chat_api():
         })
 
     except Exception as e:
+        print("Error:", e)
         return jsonify({"error": str(e)}), 500
+
 
 @app.route("/", methods=["GET"])
 def home():
